@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[requires]
+python_version = "{python_version}"
+
+[packages]
+{pip_packages}
+
+[dev-packages]
+black = "==21.12b0"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+pre-commit = "*"
+pytest = "*"
+pytest-cov = "*"
+{pip_dev_packages}
