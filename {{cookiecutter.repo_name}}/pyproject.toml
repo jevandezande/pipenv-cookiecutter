@@ -1,2 +1,5 @@
 [tool.black]
 line-length = {{cookiecutter.line_length}}
+
+[tool.isort]
+profile = "black"

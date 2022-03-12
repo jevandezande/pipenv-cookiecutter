@@ -8,7 +8,6 @@ from datetime import datetime
 from subprocess import check_call
 from typing import Optional
 
-
 logger = logging.Logger("post_gen_project_logger")
 logger.setLevel(logging.INFO)
 
@@ -70,12 +69,13 @@ def git_init():
 def update_pipfile():
     with open("Pipfile") as f:
         # Extra space and .strip() prevents issues with quotes
-        contents = f.read().replace(
-            "{pip_packages}",
-            """{{cookiecutter.pip_packages}} """.strip()
-        ).replace(
-            "{pip_dev_packages}",
-            """{{cookiecutter.pip_dev_packages}} """.strip(),
+        contents = (
+            f.read()
+            .replace("{pip_packages}", """{{cookiecutter.pip_packages}} """.strip())
+            .replace(
+                "{pip_dev_packages}",
+                """{{cookiecutter.pip_dev_packages}} """.strip(),
+            )
         )
     with open("Pipfile", "w") as f:
         f.write(contents)
@@ -88,17 +88,11 @@ def install_dev():
 
 
 def git_hooks():
-    call(
-        "pipenv run pre-commit install -t pre-commit",
-        "pipenv run pre-commit install -t pre-push"
-    )
+    call("pipenv run pre-commit install -t pre-commit", "pipenv run pre-commit install -t pre-push")
 
 
 def git_initial_commit():
-    call(
-        "git add .",
-        "git commit -m Setup"
-    )
+    call("git add .", "git commit -m Setup")
 
 
 def git_add_remote(name, location):
