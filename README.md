@@ -18,10 +18,10 @@
 
 
 ## Setup
-Most of the setup steps are automated, but one can also follow a flow similar to the below.
+While all of the steps are automated, you will need to install `pipenv`.
+Additionally, `pipx` is recommended for installing any command line tools.
 
 ```sh
-# Pipx is better for installing executables
 python3 -m pip install pipx
 pipx ensurepath
 
@@ -33,7 +33,7 @@ pipx run cookiecutter gh:jevandezande/pipenv-cookiecutter
 ```
 
 
-The cookiecutter will automatically
+The cookiecutter will automagically
 - Generate a repo with the input configuration
 - Initialise git
 - Install dependencies
@@ -42,4 +42,5 @@ The cookiecutter will automatically
 
 
 ## Recommendations
-Make a `cookiecutter.yml` file with your default settings.
+Make a `cookiecutter.yml` configuration file (see `template_config.yml`) with
+your default settings and use it with the flag `--config-file cookiecutter.yml`
