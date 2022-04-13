@@ -1,0 +1,36 @@
+name: Test Setup
+
+on:
+    pull_request: {}
+    push:
+        branches: master
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - uses: actions/setup-python@v2
+              with:
+                  python-version: "3.10"
+
+            - name: Install dependencies with pipenv
+              run: |
+                  python3 -m pip install pipx
+                  pipx ensurepath
+                  pip install pipenv
+                  pipenv install --deploy --dev
+
+            - run: pipenv run isort --diff .
+            - run: pipenv run black --check hooks
+            - run: pipenv run flake8
+            - run: pipenv run mypy
+
+            - name: Configure git
+              run: |
+                  git config --global user.email "default@example.com"
+                  git config --global user.name "Default Name"
+
+            - name: Run cookiecutter
+              run: pipx run cookiecutter gh:jevandezande/pipenv-cookiecutter --no-input
