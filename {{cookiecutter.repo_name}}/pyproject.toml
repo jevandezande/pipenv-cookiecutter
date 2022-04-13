@@ -3,3 +3,13 @@ line-length = {{cookiecutter.line_length}}
 
 [tool.isort]
 profile = "black"
+line_length = 100
+
+[tool.mypy]
+files = ["{{cookiecutter.repo_name}}", "tests"]
+ignore_missing_imports = true
+
+[tool.pytest]
+testpaths = ["tests/"]
+addopts = "--doctest-modules"
+doctest_optionflags = "NORMALIZE_WHITESPACE"

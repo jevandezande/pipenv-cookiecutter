@@ -3,3 +3,8 @@ line-length = 100
 
 [tool.isort]
 profile = "black"
+line_length = 100
+
+[tool.mypy]
+files = ["hooks"]
+ignore_missing_imports = true
