@@ -72,10 +72,7 @@ def update_pipfile():
         contents = (
             f.read()
             .replace("{pip_packages}", """{{cookiecutter.pip_packages}} """.strip())
-            .replace(
-                "{pip_dev_packages}",
-                """{{cookiecutter.pip_dev_packages}} """.strip(),
-            )
+            .replace("{pip_dev_packages}", """{{cookiecutter.pip_dev_packages}} """.strip())
         )
     with open("Pipfile", "w") as f:
         f.write(contents)
