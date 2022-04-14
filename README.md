@@ -1,7 +1,7 @@
 # Pipenv Cookiecutter
 [![License](https://img.shields.io/github/license/jevandezande/pipenv-cookiecutter)](https://github.com/jevandezande/pipenv-cookiecutter/blob/master/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jevandezande/pipenv-cookiecutter/Test)](https://github.com/jevandezande/pipenv-cookiecutter/actions/)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jevandezande/pipenv-cookiecutter/Test%20Setup)](https://github.com/jevandezande/pipenv-cookiecutter/actions/)
 [![Codecov](https://img.shields.io/codecov/c/github/jevandezande/pipenv-cookiecutter)](https://app.codecov.io/gh/jevandezande/pipenv-cookiecutter/)
 
 [Cookiecutter](https://github.com/audreyr/cookiecutter) for setting up pipenv projects with all of the below features.
