@@ -1,5 +1,6 @@
 [tool.black]
 line-length = {{cookiecutter.line_length}}
+target-version = ["py310"]
 
 [tool.isort]
 profile = "black"
@@ -10,6 +11,6 @@ files = ["{{cookiecutter.repo_name}}", "tests"]
 ignore_missing_imports = true
 
 [tool.pytest]
-testpaths = ["tests/"]
+testpaths = ["tests"]
 addopts = "--doctest-modules"
 doctest_optionflags = "NORMALIZE_WHITESPACE"
