@@ -1,5 +1,29 @@
+[project]
+name = "Pipenv Cookiecutter"
+description = "Cookiecutter for setting up python projects with pipenv that just work"
+authors = [ { name = "Jonathon Vandezande", email = "jevandezande@gmail.com" }, ]
+license = "MIT"
+license_file = "LICENSE"
+readme = "README.md"
+version = "0.3.0"
+requires-python = ">=3.9"
+keywords = ["cookiecutter", "pipenv"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+repository = "https://github.com/jevandezande/pipenv-cokiecutter"
+
 [tool.black]
 line-length = 100
+target-version = ["py310"]
 
 [tool.isort]
 profile = "black"

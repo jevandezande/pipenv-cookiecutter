@@ -30,6 +30,7 @@ def set_python_version():
     file_names = [
         ".github/workflows/test.yml",
         "Pipfile",
+        "pyproject.toml",
         "setup.cfg",
     ]
 

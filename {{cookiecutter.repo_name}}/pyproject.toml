@@ -1,3 +1,28 @@
+[project]
+name = "{{cookiecutter.project_name}}"
+description = "Cookiecutter for setting up python projects with pipenv that just work"
+authors = [ { name = "{{cookiecutter.author_name}}" }, ]
+license = "{{cookiecutter.license}}"
+license_file = "{{"LICENSE" if cookiecutter.license else ""}}"
+readme = "README.md"
+version = "0.1.0"
+requires-python = ">={python_version}"
+keywords = []
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: {python_version}",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+repository = "{{cookiecutter.project_url}}"
+
+[project.scripts]
+
 [tool.black]
 line-length = {{cookiecutter.line_length}}
 target-version = ["py310"]
