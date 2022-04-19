@@ -3,7 +3,7 @@
     "repo_name": "{{cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_')}}",
     "author_name": "",
     "github_username": "",
-    "project_url": "git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
+    "project_url": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
     "pip_packages": "",
     "pip_dev_packages": "",
     "line_length": "100",
