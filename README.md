@@ -3,7 +3,16 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jevandezande/pipenv-cookiecutter/Test%20Setup)](https://github.com/jevandezande/pipenv-cookiecutter/actions/)
 
+# Deprecation warning
+
+This project is deprecated in favor of using Poetry for package management.
+See [jevandezande/poetry-cookiecutter](https://github.com/jevandezande/poetry-cookiecutter)
+
+
+# Intro
+
 [Cookiecutter](https://github.com/audreyr/cookiecutter) for setting up pipenv projects with all of the below features.
+
 
 ## Features
 - Testing with [pytest](https://docs.pytest.org/en/latest/)
